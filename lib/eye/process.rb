@@ -3,6 +3,8 @@ require 'celluloid'
 class Eye::Process
   include Celluloid
   
+  execute_block_on_receiver :wait_for_condition
+  
   autoload :Config,           'eye/process/config'
   autoload :Commands,         'eye/process/commands'
   autoload :Data,             'eye/process/data'
